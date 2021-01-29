@@ -90,3 +90,23 @@ xxxx.xxx # *.json, *.yml, node_modules, etc...
 - Express
 - Tsyringe
 - whois-json
+
+## Settings of the environment
+> Copy and paste the file .env.example for .env.
+
+## Before start for users linux.
+> [!CAUTION]
+> Set your environment configurations.
+> `$ chmod a+x ./docker/app.sh`
+
+## Running
+```bash
+$ docker-compose up -d
+```
+__________________________________
+
+|  Service     |  Post           |
+| ------------ | --------------- |
+|  APP         |  localhost:9000 |
+|  MySQL       |  localhost:3306 |
+__________________________________

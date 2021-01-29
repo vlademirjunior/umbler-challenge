@@ -1,0 +1,39 @@
+version: '3.4'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+      args:
+        UID_USER_SYSTEM: ${UID_USER_SYSTEM}
+        USER_SYSTEM: ${USER_SYSTEM}
+    stdin_open: true
+    env_file: 
+      - .env
+    entrypoint: ./docker/app.sh
+    container_name: challenge_umbler_app
+    networks:
+      - app-network
+    ports:
+      - 9000:9000
+    volumes:
+      - type: bind
+        source: .
+        target: /usr/src/app
+  mysql:
+    image: mysql:5.7
+    networks:
+      - app-network
+    volumes:
+      - ./docker/init.sql:/data/application/init.sql
+    command: --init-file /data/application/init.sql
+    container_name: challenge_umbler_db
+    environment:
+      - MYSQL_DATABASE=umbler_challenge
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - 3306:3306
+networks:
+  app-network:
+    driver: bridge
