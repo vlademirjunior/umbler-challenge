@@ -62,7 +62,7 @@ src      # Source code the application
 xxxx.xxx # *.json, *.yml, node_modules, etc...
 ~~~~
 
-### Main Technologies and Tools
+## Main Technologies and Tools
 - Docker and docker-compose
 - MySQL
 - NodeJS
