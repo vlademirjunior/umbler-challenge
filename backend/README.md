@@ -5,7 +5,7 @@
 - Code reuse in other classes.
 - Easy maintenance, as we will granulate our responsibilities and etc..., (Google search on SOLID).
 
-- Patterns e principles used.
+##### Patterns e principles used.
 _______________________________________________________________
 
 |  Design Pattern           |  SOLID           | GoF          |
@@ -23,7 +23,7 @@ _______________________________________________________________
 ______________________________________________
 
 |  Intial | Meaning                          |
-| ------------------------------------------ |
+| --------|--------------------------------- |
 |  S      | Single Responsability Principle  |
 |  O      | Open-closed Principle            |
 |  L      | Liskov Substitution Principle    |
@@ -31,6 +31,25 @@ ______________________________________________
 |  D      | Dependency Inversion Principle   |
 ______________________________________________
 
+## Other pattern used
+#### DTO - Data Transfer Object Pattern
+- The definition for DTO can be found on Martin Fowler's site. DTOs are used to transfer parameters to methods and as return types. A lot of people use those in the UI, but others inflate domain objects from them.
+- Source: https://martinfowler.com/eaaCatalog/dataTransferObject.html
+
+## Others principles used
+#### KISS (Keep It Simple Stupid)
+- This principle states that you should always keep your code simple. If you have a complex piece of code, always try to break it into smaller more maintainable code.
+
+#### YAGNI (You Aren’t Gonna Need It)
+- This principle states not to implement something until it is necessary. This is a piece of advice every developer should follow.
+
+#### DRY (Don’t Repeat Yourself) *** Business rules ***
+- This principle is crucial for writing simple and easy-to-modify code.
+- The opposite of DRY code is WET code: write everything twice.
+- You can create a common function or abstract your code to avoid any repetition in your code.
+
+#### SoC (Separation of Concerns)
+- SoC principle is all about minding your own business, literally.
 
 ~~~~
 dist     # Compiled files to js.
