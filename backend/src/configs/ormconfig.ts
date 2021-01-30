@@ -1,6 +1,7 @@
+import { ConnectionOptions } from 'typeorm';
 import { database } from './env';
 
-export = {
+const config: ConnectionOptions = {
     type: 'mysql',
     host: database.host,
     port: database.port,
@@ -17,3 +18,4 @@ export = {
         migrationsDir: 'src/migrations',
     }
 };
+export = config;

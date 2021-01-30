@@ -31,10 +31,13 @@ ______________________________________________
 |  D      | Dependency Inversion Principle   |
 ______________________________________________
 
-## Other pattern used
+## Others patterns used
 #### DTO - Data Transfer Object Pattern
 - The definition for DTO can be found on Martin Fowler's site. DTOs are used to transfer parameters to methods and as return types. A lot of people use those in the UI, but others inflate domain objects from them.
 - Source: https://martinfowler.com/eaaCatalog/dataTransferObject.html
+
+#### AAA - Arrange, Act and Assert Pattern
+- The AAA (Arrange-Act-Assert) pattern has become almost a standard across the industry. It suggests that you should divide your test method into three sections: arrange, act and assert. Each one of them only responsible for the part in which they are named after.
 
 ## Others principles used
 #### KISS (Keep It Simple Stupid)
@@ -60,16 +63,16 @@ src      # Source code the application
     └───configs       # Configurations of the environment variables, databases... "BUILDER & SINGLETON"
     └───constants     # Centralize values, HTTP Status Code... "EVIT MAGIC NUMBER"
     └───container     # Container of the independency injection.
-    └───exceptions    # Custom errors of the application.
+    └───errors        # Custom errors of the application.
     └───facades       # Orchestration "FACADE".
-    └───middlewares   # Headers mutations, Headers check, Errors Handlers, etc...
+    └───middlewares   # Headers mutations "security tactic", Headers check, Errors Handlers, etc...
     └───migrations    # Database migrations.
     └───modules       # Domains (DDD), that is, rules, or business logic.
             └───x         # Module name.
                   └───controllers   # Receive from the "Route" an "Request", forward for the "Service" to be processed the business rule and delivers "Response" to "Route" again.
                   └───entities      # Entities or "models" of the database.
                   └───interfaces    # Data Transfer Objects(DTO), common interfaces...
-                  └───providers     # Third-party services. "ADAPTER"
+                  └───providers     # third-party services and services that access the outside world."ADAPTER"
                   └───repositories  # ORM / Query Builders. "ADAPTER"
                   └───routes        # Routes and validations.
                   └───services      # Business rules.
@@ -101,7 +104,7 @@ xxxx.xxx # *.json, *.yml, node_modules, etc...
 
 ## Running
 ```bash
-$ docker-compose up -d
+$ docker-compose up
 ```
 __________________________________
 

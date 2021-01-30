@@ -1,0 +1,3 @@
+# Why the "configs" directory?
+~~~~
+- It is where we will centralize all our environment variables and other settings that we will use by the application, such as: access to database, secret key, email, tests and much more...

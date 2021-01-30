@@ -30,7 +30,7 @@ services:
     command: --init-file /data/application/init.sql
     container_name: challenge_umbler_db
     environment:
-      - MYSQL_DATABASE=umbler_challenge
+      - MYSQL_DATABASE=challenge_umbler_db
       - MYSQL_ROOT_PASSWORD=root
     ports:
       - 3306:3306
