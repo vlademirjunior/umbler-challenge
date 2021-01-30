@@ -1,4 +1,6 @@
 # Umbler Challenge 
+![100% Coverage - TDD](tdd_business_rules.png)
+
 - // TODO: Project exaplained with video on YouTube.
 
 ## / Root of the project

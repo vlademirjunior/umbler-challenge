@@ -4,7 +4,9 @@ export const database = {
     password: process.env.APP_DB_PASSWORD,
     name: process.env.APP_DB_NAME,
     port: Number(process.env.APP_DB_PORT),
+}
+
+export const umblerChallenge = {
     nodeEnv: process.env.NODE_ENV,
-    secretKey: process.env.APP_SECRET_KEY,
-    portApp: Number(process.env.APP_PORT),
+    port: Number(process.env.APP_PORT),
 }
