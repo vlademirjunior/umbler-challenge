@@ -5,12 +5,12 @@ services:
     container_name: umbler-challenge-frontend
     build:
       context: .
-      dockerfile: ./dockerfiles/Dockerfile
+      dockerfile: ./docker/Dockerfile
       args:
         UID_USER_SYSTEM: ${UID_USER_SYSTEM}
         USER_SYSTEM: ${USER_SYSTEM}
     stdin_open: true
-    entrypoint: ./dockerfiles/entrypoint.sh
+    entrypoint: ./docker/entrypoint.sh
     networks:
       - umbler_challenge_network
     env_file: 

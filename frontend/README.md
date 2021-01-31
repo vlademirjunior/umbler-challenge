@@ -6,13 +6,28 @@
 > [!CAUTION]
 > 'http://localhost:9000/api' is defined on the ".env" file and is the backend api.
 
+## Similar directories and files
+________________________________________________________________
+
+|  Frontend                 |  Backend         | Business Rules|
+| ------------------------- | ---------------- |---------------|
+|  apis                     | modules          | *             |
+|  apis/index               | modules/routes   | *             |
+|  contracts                | interfaces       | *             |
+|  clients                  | providers        | *             |
+|  resources                | repositories     | *             |
+|  services                 | services         | *             |
+|  DomainModule             | DomainController | *             |
+________________________________________________________________
+
+
 ## Settings of the environment
 > Copy and paste the file .env.example for .env.
 > Set your environment configurations.
 
 ## Before start for users linux.
 > [!CAUTION]
-> `$ chmod a+x ./docker/app.sh`
+> `$ chmod a+x ./docker/entrypoint.sh`
 
 ## Running
 ```bash
@@ -22,7 +37,7 @@ __________________________________
 
 |  Service     |  Post           |
 | ------------ | --------------- |
-|  WEB         |  localhost:8080 |
+|  Frontend    |  localhost:8080 |
 __________________________________
 
 ### Compiles and hot-reloads for development

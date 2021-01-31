@@ -1,9 +1,14 @@
 # Umbler challenge 
 ![100% Coverage - TDD](tdd_business_rules.png)
 
-- // TODO: Project exaplained with video on YouTube.
-
 ## / Root of the project
+
+> [!WARNING]
+> Order to run the docker-compose.
+## Run the backend first and then the frontend.
+- cd backend && docker-compose up -d
+- cd ..
+- cd frontend && docker-compose up -d
  
 ** Read the readme in `./backend` and`./frontend` they have all the basic project documentation.
 
