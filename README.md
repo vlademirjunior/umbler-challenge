@@ -1,5 +1,5 @@
 # Umbler challenge 
-![100% Coverage - TDD](tdd_business_rules.png)
+![100% Coverage - TDD](business_rules.png)
 ![umbler.com](umbler.com.png)
 ![umbler.com.br](tdi.com.png)
 ![umbler.erro](umbler.erro.png)
