@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  frontend:
+    container_name: umbler-challenge-frontend
+    build:
+      context: .
+      dockerfile: ./dockerfiles/Dockerfile
+      args:
+        UID_USER_SYSTEM: ${UID_USER_SYSTEM}
+        USER_SYSTEM: ${USER_SYSTEM}
+    stdin_open: true
+    entrypoint: ./dockerfiles/entrypoint.sh
+    networks:
+      - umbler_challenge_network
+    env_file: 
+      - .env
+    ports:
+      - 8080:8080
+    volumes:
+    - type: bind
+      source: .
+      target: /usr/src/app
+networks:
+  umbler_challenge_network:
+    external: true   

@@ -9,8 +9,7 @@ export default class DomainController {
     try {
       const { domainName } = request.params;
       const showDomain = container.resolve(ShowDomainService);
-      const viewDomain = await showDomain
-        .execute({ name: domainName });
+      const viewDomain = await showDomain.execute({ name: domainName });
       return response.json(viewDomain);
     } catch (_exception) {
       throw new BadGatewayException(
