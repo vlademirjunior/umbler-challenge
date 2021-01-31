@@ -1,4 +1,4 @@
-# BACKEND - Umbler Challenge
+# BACKEND - Umbler challenge
 
 ## Main objective of this architecture.
 - To do unit tests will be much easier, without the need to make a request to an endpoint.
@@ -95,12 +95,12 @@ xxxx.xxx # *.json, *.yml, node_modules, etc...
 - whois-json
 
 ## Settings of the environment
-> Copy and paste the file .env.example for .env.
+> Copy and paste the file .env.example for .env
+> Set your environment configurations.
 
 ## Before start for users linux.
 > [!CAUTION]
-> Set your environment configurations.
-> `$ chmod a+x ./docker/app.sh`
+> `$ chmod a+x ./docker/entrypoint.sh`
 
 ## Running
 ```bash
@@ -110,6 +110,6 @@ __________________________________
 
 |  Service     |  Post           |
 | ------------ | --------------- |
-|  APP         |  localhost:9000 |
+|  Backend     |  localhost:9000 |
 |  MySQL       |  localhost:3306 |
 __________________________________

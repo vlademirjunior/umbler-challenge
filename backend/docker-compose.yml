@@ -1,7 +1,7 @@
 version: '3.4'
 
 services:
-  app:
+  backend:
     build:
       context: .
       dockerfile: ./docker/Dockerfile
@@ -11,10 +11,10 @@ services:
     stdin_open: true
     env_file: 
       - .env
-    entrypoint: ./docker/app.sh
-    container_name: challenge_umbler_app
+    entrypoint: ./docker/entrypoint.sh
+    container_name: umbler-challenge-backend
     networks:
-      - app-network
+      - umbler_challenge
     ports:
       - 9000:9000
     volumes:
@@ -24,16 +24,17 @@ services:
   mysql:
     image: mysql:5.7
     networks:
-      - app-network
+      - umbler_challenge
     volumes:
       - ./docker/init.sql:/data/application/init.sql
     command: --init-file /data/application/init.sql
-    container_name: challenge_umbler_db
+    container_name: umbler_challenge_db
     environment:
-      - MYSQL_DATABASE=challenge_umbler_db
+      - MYSQL_DATABASE=umbler_challenge_db
       - MYSQL_ROOT_PASSWORD=root
     ports:
       - 3306:3306
 networks:
-  app-network:
+  umbler_challenge:
+    name: umbler_challenge_network
     driver: bridge

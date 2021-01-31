@@ -1,1 +1,1 @@
-CREATE DATABASE challenge_umbler_db CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+CREATE DATABASE umbler_challenge_db CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
