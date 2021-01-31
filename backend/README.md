@@ -1,6 +1,7 @@
-# BACKEND - Umbler Challenge
+# BACKEND - Umbler challenge
 
 ## Main objective of this architecture.
+- Clean code [More details](https://www.hostgator.com.br/blog/clean-code-o-que-e/)
 - To do unit tests will be much easier, without the need to make a request to an endpoint.
 - Code reuse in other classes.
 - Easy maintenance, as we will granulate our responsibilities and etc..., (Google search on SOLID).
@@ -95,21 +96,22 @@ xxxx.xxx # *.json, *.yml, node_modules, etc...
 - whois-json
 
 ## Settings of the environment
-> Copy and paste the file .env.example for .env.
+> Copy and paste the file .env.example for .env
+> Set your environment configurations.
+> See services configs on the docker-compose.yml file `APP_DB_NAME` is `MYSQL_DATABASE` by example.
 
 ## Before start for users linux.
 > [!CAUTION]
-> Set your environment configurations.
-> `$ chmod a+x ./docker/app.sh`
+> `$ chmod a+x ./docker/entrypoint.sh`
 
 ## Running
 ```bash
-$ docker-compose up
+$ docker-compose up -d
 ```
 __________________________________
 
 |  Service     |  Post           |
 | ------------ | --------------- |
-|  APP         |  localhost:9000 |
+|  Backend     |  localhost:9000 |
 |  MySQL       |  localhost:3306 |
 __________________________________

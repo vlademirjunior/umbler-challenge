@@ -9,7 +9,11 @@ const { compilerOptions } = require('./tsconfig.json'); module.exports = {
   coverageReporters: [
     "text-summary",
     "lcov"
-  ], moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>/src/' }), preset: 'ts-jest', testEnvironment: "node",
+  ], moduleNameMapper: pathsToModuleNameMapper(
+    compilerOptions.paths, { prefix: '<rootDir>/src/' }
+  ),
+  preset: 'ts-jest',
+  testEnvironment: "node",
   testMatch: [
     "**/*.spec.ts",
   ],

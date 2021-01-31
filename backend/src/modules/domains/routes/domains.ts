@@ -1,10 +1,10 @@
 import { Router } from 'express';
 import DomainController from '../controllers/DomainController';
-import { showDomainRequest } from '../validates/showDomainRequest';
+import { showDomainValidateRequest } from '../validates/showDomainValidateRequest';
 
-const dnsRouters = Router();
+const domainRouters = Router();
 const domainController = new DomainController();
 
-dnsRouters.get('/:domainName', ...showDomainRequest, domainController.show);
+domainRouters.get('/:domainName', ...showDomainValidateRequest, domainController.show);
 
-export default dnsRouters;
+export default domainRouters;
