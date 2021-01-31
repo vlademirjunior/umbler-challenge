@@ -1,19 +1,16 @@
 # Umbler challenge 
 ![100% Coverage - TDD](tdd_business_rules.png)
 ![umbler.com](umbler.com.png)
-![umbler.com.br](umbler.com.br.png)
+![umbler.com.br](tdi.com.png)
 ![umbler.erro](umbler.erro.png)
 
 ## / Root of the project
 
+** Read the readme in `./backend` and`./frontend` they have all the basic project documentation.
+
 > [!WARNING]
 > Order to run the docker-compose.
 ## Run the backend first and then the frontend.
-- cd backend && docker-compose up -d
-- cd ..
-- cd frontend && docker-compose up -d
- 
-** Read the readme in `./backend` and`./frontend` they have all the basic project documentation.
 
 ### Cheat Sheet - docker-compose
 

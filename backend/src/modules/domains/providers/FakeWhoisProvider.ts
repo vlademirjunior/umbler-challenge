@@ -17,7 +17,7 @@ export default class FakeWhoisProvider implements IWhoisProvider {
         this.whoisInformationTable = [
             {
                 'domainName': constant.TEST_DOMAIN_NAME,
-                'registrationServiceProvidedBy': 'Locaweb',
+                'registrationServiceProvidedBy': 'Umbler',
                 'nameServer': 'ns254.umbler.com'
             }
         ];
@@ -32,7 +32,13 @@ export default class FakeWhoisProvider implements IWhoisProvider {
     ): Promise<IFormatterDTO> {
         return {
             whois: JSON.stringify(whoisComplete),
-            web_hosting: whoisComplete.registrationServiceProvidedBy,
+            web_hosting: this.improvedWebHostingExtraction({ whoisComplete }),
         }
+    }
+
+    private improvedWebHostingExtraction(
+        { whoisComplete }: IWhoisProviderKeyableDTO
+    ): string | undefined {
+        return whoisComplete.registrationServiceProvidedBy;
     }
 }

@@ -23,7 +23,7 @@ const validations = checkSchema({
     }
 });
 
-export const showDomainRequest = [
+export const showDomainValidateRequest = [
     validations,
     (request: Request, response: Response, next: NextFunction) => {
         const errors = validationResult(request);
