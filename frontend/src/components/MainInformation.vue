@@ -8,7 +8,7 @@
         <h4>IP: {{ domainInformation.ip_address }}</h4>
       </div>
       <div v-show="domainInformation.web_hosting">
-        <h4>Hospedado por: {{ domainInformation.web_hosting }}</h4>
+        <h4>Hospedado em: {{ domainInformation.web_hosting }}</h4>
       </div>
     </div>
   </b-container>

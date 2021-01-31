@@ -17,7 +17,7 @@ export class CreateDomainsTable1611930272154 implements MigrationInterface {
                     {
                         name: 'name',
                         type: 'varchar',
-                        isNullable: true,
+                        isNullable: false,
                     },
                     {
                         name: 'ip_address',
